@@ -3,6 +3,8 @@ img {
 }
 
 body {
-    text-align: center;
-    font-family: "Arial";
+        font-family: sans-serif;
+          display: grid;
+            justify-items: center;
+              } #maindiv { width: 60%; }
 }
