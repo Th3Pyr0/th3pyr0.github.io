@@ -1,0 +1,10 @@
+img {
+    width: 440px;
+}
+
+body { color: red;
+        font-family: serif;
+          display: grid;
+            justify-items: center;
+              {#maindiv { width: 60%; }
+}
