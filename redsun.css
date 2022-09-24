@@ -2,7 +2,8 @@ img {
     width: 1100px;
 }
 
-body { color: red;
+body { color: maroon;
+    background-color: #3C0E12;
         font-family: serif;
           display: grid;
             justify-items: center;
