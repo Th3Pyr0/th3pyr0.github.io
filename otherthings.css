@@ -1,0 +1,11 @@
+img {
+    max-width: 15%;
+    width: 200px;
+    // assume this is the default size
+}
+body {
+        font-family: sans-serif;
+          display: grid;
+            justify-items: center;
+              {#maindiv { width: 60%; }
+}
