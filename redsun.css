@@ -2,10 +2,11 @@ img {
     width: 1100px;
 }
 
-body { color: maroon;
-    background-color: #3C0E12;
-        font-family: serif;
+body { color: #36454F;
+    background-color: #000000;
+        font-family: monospace;
+         text-shadow: 2px 2px #20C20E;
           display: grid;
-            justify-items: center;
+            justify-items: right;
               {#maindiv { width: 60%; }
 }
