@@ -8,6 +8,7 @@ h1 {
     color: Yellow;
     font-family: sans-serif;
     text-align: center;
+font-size: 10px;
 }
 a#download {
     display: block;
