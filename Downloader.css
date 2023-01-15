@@ -4,8 +4,8 @@
     padding: 100px 100px
 }
 h1 {
-    color: white;
-    font-family: Arial;
+    color: Yellow;
+    font-family: sans-serif;
     text-align: center;
 }
 a#download {
@@ -20,4 +20,18 @@ a#download {
     border: 1px solid #fff;
     text-decoration: none;
     border-radius: 10px;
+}
+
+img {
+    max-width: 15%;
+    width: 200px;
+    // assume this is the default size
+}
+body {
+        font-family: sans-serif;
+          display: grid;
+            justify-items: center;
+              {#maindiv { width: 60%; }
+                  text-shadow: 2px 2px 3px #000000;
+}
 }
