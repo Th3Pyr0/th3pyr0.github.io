@@ -1,29 +1,17 @@
-#header {
-    background: #664c8f;
-    height: auto;
-    padding: 100px 100px
-text-align: center;
-}
-h1 {
-    color: Yellow;
-    font-family: sans-serif;
-    text-align: center;
-font-size: 10px;
-}
-a#download {
-    display: block;
-    text-align: center;
-    width: 150px;
-    margin: 0px auto;
-    padding: 20px;
-    color: white;
-    text-transform: uppercase;
-    font-family: Arial;
-    border: 1px solid #fff;
-    text-decoration: none;
-    border-radius: 10px;
+/* Style buttons */
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
 }
 
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
 img {
     max-width: 15%;
     width: 200px;
