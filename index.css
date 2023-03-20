@@ -6,11 +6,12 @@ img {
 body {
         font-family: sans-serif;
           display: grid;
+  background-image: url("hfrepeat.png");
+                    background-repeat: repeat-x;
             justify-items: center;
               {#maindiv { width: 60%; }
                   text-shadow: 2px 2px 3px #000000;
-                  background-image: "https://raw.githubusercontent.com/Th3Pyr0/th3pyr0.github.io/main/Untitled-1.png";
-                    background-repeat: repeat-x;
+                  
 }
 }
  
