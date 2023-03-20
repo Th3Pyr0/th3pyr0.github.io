@@ -9,5 +9,7 @@ body {
             justify-items: center;
               {#maindiv { width: 60%; }
                   text-shadow: 2px 2px 3px #000000;
+                  background-image: url("Untitled-1.png");
+  background-repeat: repeat;
 }
 }
