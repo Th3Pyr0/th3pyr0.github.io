@@ -1,13 +1,13 @@
 img {
-    max-width: 15%;
-    width: 200px;
+    max-width: 40%;
+    width: 300px;
     // assume this is the default size
 }
 body {
         font-family: sans-serif;
           display: grid;
   background-image: url("hfrepeat.png");
-                    background-repeat: repeat-x;
+                    background-repeat: repeat;
             justify-items: center;
               {#maindiv { width: 60%; }
                   text-shadow: 2px 2px 3px #000000;
