@@ -64,22 +64,32 @@
         
             ];
 
+            var producttype = [
+                "Body Wash",
+                "Deoderant",
+                "Shampoo",
+                "Soap"
+            ];
+
             var randomIndex1 = Math.floor(Math.random() * manlyWords.length);
             var randomIndex2 = Math.floor(Math.random() * manlyWords.length);
             var randomIndex3 = Math.floor(Math.random() * deodorantWords.length);
               var randomIndex4 = Math.floor(Math.random() * manlyWords.length);
+            var randomIndex5 = Math.floor(Math.random() * producttype.length);
+            
 
             var randomWord1 = manlyWords[randomIndex1];
             var randomWord2 = manlyWords[randomIndex2];
             var randomWord3 = deodorantWords[randomIndex3];
             var randomWord4 = manlyWords[randomIndex4];
+            var randomWord5 = producttype[randomIndex];
 
             // Add "And" between the first two words with a 50% chance
             var separator = Math.random() < 0.5 ? "And " : "";
             var thirdword = Math.random() < 0.2 ? randomWord4 : "";
             var anotherthirdword = separator + thirdword;
 
-            var scent = randomWord1 + " " + separator + randomWord2 + " " + anotherthirdword + " " + randomWord3;
+            var scent = randomWord1 + " " + separator + randomWord2 + " " + anotherthirdword + " " + randomWord3 + " " + randomWord5;
             document.getElementById("scent").innerText = scent;
         }
     </script>
