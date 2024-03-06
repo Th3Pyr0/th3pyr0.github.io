@@ -73,8 +73,9 @@
             var randomWord1 = manlyWords[randomIndex1];
             var randomWord2 = manlyWords[randomIndex2];
             var randomWord3 = deodorantWords[randomIndex3];
+            var separator = Math.random() < 0.5 ? " And " : " ";
 
-            var scent = randomWord1 + " " + randomWord2 + " " + randomWord3;
+            var scent = randomWord1 + seperator + " " + randomWord2 + " " + randomWord3;
             document.getElementById("scent").innerText = scent;
         }
     </script>
