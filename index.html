@@ -77,8 +77,9 @@
             // Add "And" between the first two words with a 50% chance
             var separator = Math.random() < 0.5 ? "And " : "";
             var thirdword = Math.random() < 0.2 ? randomWord4 : "";
+            var anotherthirdword = separator + thirdword;
 
-            var scent = randomWord1 + " " + separator + randomWord2 + " " + thirdword + " " + randomWord3;
+            var scent = randomWord1 + " " + separator + randomWord2 + " " + anotherthirdword + " " + randomWord3;
             document.getElementById("scent").innerText = scent;
         }
     </script>
