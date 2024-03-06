@@ -12,23 +12,8 @@
             margin-top: 50px;
         }
     </style>
-</head>
-<body>
-    <img src="HazardFallLogomk2.png"/>
-    <h1></h1>
-    <h2>REWRITE IN PROGRESS. ONLY LINKS ARE ACTIVE.</h2>
-    <h4>Links and References</h4>
-    <p><a href="https://forums.terraria.org/index.php?threads/pyros-universe-my-mods.110352/">My Terraria Work</a></p>
-    <p><a href="https://discord.gg/cRhxsWRsnd">My Discord</a></p>
-
-    <!-- Scent generator section -->
-    <div id="scent-generator">
-        <h2>Male Scent Generator</h2>
-        <div id="scent"></div>
-        <button onclick="generateScent()">Generate Scent</button>
-    </div>
-
-    <script>
+    <!-- Moved the script tag to the head section -->
+    <script defer>
         function generateScent() {
             var manlyWords = [
                 "Fish",
@@ -81,5 +66,20 @@
             document.getElementById("scent").innerText = scent;
         }
     </script>
+</head>
+<body>
+    <img src="HazardFallLogomk2.png"/>
+    <h1></h1>
+    <h2>REWRITE IN PROGRESS. ONLY LINKS ARE ACTIVE.</h2>
+    <h4>Links and References</h4>
+    <p><a href="https://forums.terraria.org/index.php?threads/pyros-universe-my-mods.110352/">My Terraria Work</a></p>
+    <p><a href="https://discord.gg/cRhxsWRsnd">My Discord</a></p>
+
+    <!-- Scent generator section -->
+    <div id="scent-generator">
+        <h2>Male Scent Generator</h2>
+        <div id="scent"></div>
+        <button onclick="generateScent()">Generate Scent</button>
+    </div>
 </body>
 </html>
