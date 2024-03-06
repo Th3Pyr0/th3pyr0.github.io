@@ -1,21 +1,68 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="icon" href="https://raw.githubusercontent.com/Th3Pyr0/MyImages/main/HazardFallLogosmallrs.png"/>
-        <link rel="stylesheet" href="index.css"/>
-        <title>Hazardfall Homepage</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <img src="HazardFallLogomk2.png"/>
-            <h1></h1>
-                <h2>REWRITE IN PROGRESS. ONLY LINKS ARE ACTIVE.</h2>
-        <h4>Links and References</h4>
-        <p> <a href="https://forums.terraria.org/index.php?threads/pyros-universe-my-mods.110352/">My Terraria Work</a> </p>
+<head>
+    <link rel="icon" href="https://raw.githubusercontent.com/Th3Pyr0/MyImages/main/HazardFallLogosmallrs.png"/>
+    <link rel="stylesheet" href="index.css"/>
+    <title>Hazardfall Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Additional styles for the scent generator */
+        #scent-generator {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <img src="HazardFallLogomk2.png"/>
+    <h1></h1>
+    <h2>REWRITE IN PROGRESS. ONLY LINKS ARE ACTIVE.</h2>
+    <h4>Links and References</h4>
+    <p><a href="https://forums.terraria.org/index.php?threads/pyros-universe-my-mods.110352/">My Terraria Work</a></p>
+    <p><a href="https://discord.gg/cRhxsWRsnd">My Discord</a></p>
 
-<p> <a href="https://discord.gg/cRhxsWRsnd">My Discord</a> </p>
-      
+    <!-- Scent generator section -->
+    <div id="scent-generator">
+        <h2>Male Scent Generator</h2>
+        <div id="scent"></div>
+        <button onclick="generateScent()">Generate Scent</button>
+    </div>
 
-	
-    </body>
+    <script>
+        function generateScent() {
+            var manlyWords = [
+                "Cedarwood",
+                "Sandalwood",
+                "Leather",
+                "Musk",
+                "Tobacco",
+                "Vetiver",
+                "Bergamot",
+                "Patchouli",
+                "Amber",
+                "Oakmoss"
+            ];
+
+            var deodorantWords = [
+                "Rush",
+                "Blaze",
+                "Whiskey",
+                "Fury",
+                "Stallion",
+                "Thunder"
+            ];
+
+            var randomIndex1 = Math.floor(Math.random() * manlyWords.length);
+            var randomIndex2 = Math.floor(Math.random() * manlyWords.length);
+            var randomIndex3 = Math.floor(Math.random() * deodorantWords.length);
+
+            var randomWord1 = manlyWords[randomIndex1];
+            var randomWord2 = manlyWords[randomIndex2];
+            var randomWord3 = deodorantWords[randomIndex3];
+
+            var scent = randomWord1 + " " + randomWord2 + " " + randomWord3;
+            document.getElementById("scent").innerText = scent;
+        }
+    </script>
+</body>
 </html>
