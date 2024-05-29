@@ -1,117 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="icon" href="https://raw.githubusercontent.com/Th3Pyr0/MyImages/main/HazardFallLogosmallrs.png"/>
-    <link rel="stylesheet" href="index.css"/>
-    <title>Hazardfall Homepage</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* Additional styles for the scent generator */
-        #scent-generator {
-            text-align: center;
-            margin-top: 50px;
-        }
-    </style>
-    <!-- Moved the script tag to the head section -->
-    <script defer>
-        function generateScent() {
-            var manlyWords = [
-        
-                "Lumber",
-                "Leather",
-                "Extreme",
-                "Awesome",
-                "Cool",
-                "Patriarchy",
-                "Stallion",
-                "Gunpowder",
-                "Ar-15",
-                "Salt-Water",
-                "Brown Bear",
-                "Blood",
-                "Smoke",
-                "Tobacco",
-                "Barbeque",
-                "Bench-Press",
-                "50-Caliber",
-                "Hunting",
-                "Cement",
-                "Raw Meat",
-                "Muscles",
-                "Strength",
-                "Mojo",
-                "Dojo",
-                "Casa House",
-                "Citrus",
-                "Musky",
-                "Bourbon",
-                "Fresh",
-                "Sport",
-                "Breeze",
-                "Menthol",
-                "Grease",
-                "Sweat",
-                "Oil",
-                "Gasoline",
-                "Petroleum",
-                "Ford F-150"
-                
-                
-            ];
-
-            var deodorantWords = [
-                "Rush",
-                "Blaze",
-                "Whiskey",
-                "Fury",
-                "Forest",
-                "Beer",
-                "Scent"
-        
-            ];
-
-            var producttype = [
-                "Body Wash",
-                "Deoderant",
-                "Shampoo",
-                "Soap"
-            ];
-
-            var randomIndex1 = Math.floor(Math.random() * manlyWords.length);
-            var randomIndex2 = Math.floor(Math.random() * manlyWords.length);
-            var randomIndex3 = Math.floor(Math.random() * deodorantWords.length);
-              var randomIndex4 = Math.floor(Math.random() * manlyWords.length);
-            var randomIndex5 = Math.floor(Math.random() * producttype.length);
-            
-
-            var randomWord1 = manlyWords[randomIndex1];
-            var randomWord2 = manlyWords[randomIndex2];
-            var randomWord3 = deodorantWords[randomIndex3];
-            var randomWord4 = manlyWords[randomIndex4];
-            var randomWord5 = producttype[randomIndex5];
-
-            // Add "And" between the first two words with a 50% chance
-            var separator = Math.random() < 0.5 ? "And " : "";
-            var thirdword = Math.random() < 0.2 ? randomWord4 : "";
-            var anotherthirdword = separator + thirdword;
-
-            var scent = randomWord1 + " " + separator + randomWord2 + " " + anotherthirdword + " " + randomWord3 + " " + randomWord5;
-            document.getElementById("scent").innerText = scent;
-        }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Awesome</title>
+<style>
+  body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; }
+  .navbar { background-color: #333; overflow: hidden; }
+  .navbar a { float: left; display: block; color: #f2f2f2; text-align: center; padding: 14px 20px; text-decoration: none; }
+  .navbar a:hover { background-color: #ddd; color: black; }
+  .main-header { padding: 40px; text-align: center; background: #1abc9c; color: white; }
+  .main-header h1 { font-size: 50px; }
+  .team-section { display: flex; flex-wrap: wrap; justify-content: center; padding: 20px; }
+  .member-card { background: #f2f2f2; margin: 10px; padding: 20px; text-align: center; width: calc(25% - 20px); }
+  .member-card img { width: 100px; height: 100px; border-radius: 50%; }
+  .member-card h3 { margin: 10px 0; }
+  .member-card p { margin: 5px 0; }
+  .footer { background-color: #333; color: white; text-align: center; padding: 10px; position: relative; bottom: 0; width: 100%; }
+</style>
 </head>
 <body>
-    <img src="HazardFallLogomk2.png"/>
-    <h1></h1>
-    <h2>REWRITE IN PROGRESS. ONLY LINKS ARE ACTIVE.</h2>
-    <h4>Links and References</h4>
-    <p>Deactive until I remove the generators. This is a portfolio and, emphasis on quotation, "company" website</p>
 
-    <!-- Scent generator section -->
-    <div id="scent-generator">
-        <h2>Male Scent Generator</h2>
-        <div id="scent"></div>
-        <button onclick="generateScent()">Generate Scent</button>
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#team">Team</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div class="main-header">
+  <h1>Team Awesome</h1>
+  <p>Welcome to our professional team page.</p>
+</div>
+
+<div class="team-section" id="team">
+  <!-- Member cards will be inserted here by JavaScript -->
+</div>
+
+<div class="footer">
+  <p>Team Awesome © 2024</p>
+</div>
+
+<script>
+// Example data for team members
+const teamMembers = [
+  { name: 'Alice Johnson', position: 'CEO', imgSrc: 'path-to-image' },
+  { name: 'Bob Smith', position: 'CTO', imgSrc: 'path-to-image' },
+  // Add more team members here
+];
+
+// Function to create member cards
+function createMemberCard(member) {
+  return `
+    <div class="member-card">
+      <img src="${member.imgSrc}" alt="${member.name}">
+      <h3>${member.name}</h3>
+      <p>${member.position}</p>
     </div>
+  `;
+}
+
+// Function to render team members
+function renderTeamMembers() {
+  const teamSection = document.querySelector('.team-section');
+  teamMembers.forEach(member => {
+    teamSection.innerHTML += createMemberCard(member);
+  });
+}
+
+// Call the function to render team members
+renderTeamMembers();
+</script>
+
 </body>
 </html>
+
