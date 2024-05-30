@@ -69,13 +69,24 @@ img.fade-out {
   0%, 100% { opacity: 0; }
   20%, 80% { opacity: 1; }
 }
-  .main-header {
-  padding: 40px;
-  text-align: center;
-  background: transparent; /* Set background to transparent */
-  color: white;
+  CSS
+
+.main-header {
+  position: relative;
+  overflow: hidden;
 }
 
+.main-header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -50%; /* Adjust this value to control the slant */
+  width: 100%;
+  height: 200%; /* Ensure it covers the entire section when slanted */
+  background: white;
+  transform: rotate(-5deg); /* Adjust the angle as needed */
+  transform-origin: top left;
+}
 </style>
 </head>
 <body>
