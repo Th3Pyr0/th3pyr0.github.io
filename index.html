@@ -73,28 +73,17 @@ img.fade-out {
 
 .main-header {
   position: relative;
-  background: white; /* Set a fallback color */
-  color: black; /* Set text color to black for visibility */
-}
-
-.main-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   background: url('your-image-url') no-repeat center center;
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
-  z-index: -1;
+  color: black; /* Ensure text color is visible on white background */
 }
 
-/* Adjust the rest of your content accordingly */
-.team-section {
-  background: white;
-  /* Other styles */
+/* Add a white background to the content area below the header */
+.content-area {
+  background-color: white;
 }
+
 </style>
 </head>
 <body>
