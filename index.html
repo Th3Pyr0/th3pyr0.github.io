@@ -78,16 +78,16 @@ img.fade-out {
   color: black; /* Text color for visibility */
 }
 
-.main-header::before {
+.main-header::after {
   content: '';
   position: absolute;
   top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 0;
-  background: inherit;
+  background: white;
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
-  z-index: -1;
+  z-index: -2;
 }
 
 </style>
