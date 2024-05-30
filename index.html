@@ -73,15 +73,21 @@ img.fade-out {
 
 .main-header {
   position: relative;
-  background: url('your-image-url') no-repeat center center;
+  background: url('your-image-url') no-repeat center center; /* Replace with your image URL */
   background-size: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
-  color: black; /* Ensure text color is visible on white background */
+  color: black; /* Text color for visibility */
 }
 
-/* Add a white background to the content area below the header */
-.content-area {
-  background-color: white;
+.main-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+  z-index: -1;
 }
 
 </style>
