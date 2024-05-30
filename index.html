@@ -73,19 +73,27 @@ img.fade-out {
 
 .main-header {
   position: relative;
-  overflow: hidden;
+  background: white; /* Set a fallback color */
+  color: black; /* Set text color to black for visibility */
 }
 
-.main-header::after {
+.main-header::before {
   content: '';
   position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  bottom: -50%; /* Adjust this value to control the slant */
-  width: 100%;
-  height: 200%; /* Ensure it covers the entire section when slanted */
+  background: url('your-image-url') no-repeat center center;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+  z-index: -1;
+}
+
+/* Adjust the rest of your content accordingly */
+.team-section {
   background: white;
-  transform: rotate(-5deg); /* Adjust the angle as needed */
-  transform-origin: top left;
+  /* Other styles */
 }
 </style>
 </head>
