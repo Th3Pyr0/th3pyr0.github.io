@@ -32,6 +32,33 @@ body {
     color: black;
 }
 /* ... more of your styles */ 
+.slideshow-container {
+    position: relative;
+    height: 50vh; /* Set the height of the slideshow to 50% of the viewport height */
+    overflow: hidden;
+}
+
+.mySlide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slide 12s infinite; /* 12 seconds for each slide */
+}
+
+@keyframes slide {
+    0% { opacity: 0; }
+    8% { opacity: 1; } /* Each slide is visible for 33% of the time (4s) */
+    33% { opacity: 1; }
+    41% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.mySlide:nth-child(1) { animation-delay: 0s; }
+.mySlide:nth-child(2) { animation-delay: 4s; }
+.mySlide:nth-child(3) { animation-delay: 8s; }
+
 .main-header {
     padding: 200px 40px; /* Increased padding for scrolling effect */
     text-align: center;
@@ -106,7 +133,7 @@ body {
         <div class="mySlide" style="background-image: url('https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1714678860/mercerislandschoolsorg/ik0cr0kyryevsfcfxkon/01.jpg');"></div>
         <div class="mySlide" style="background-image: url('https://pbs.twimg.com/media/GH20Zx0boAA4xSY.jpg:large');"></div>
         <div class="mySlide" style="background-image: url('https://pbs.twimg.com/media/GH20ZxzbwAAVugG?format=jpg&name=large');"></div>
-        </div>
+    </div>
 
     <div class="main-header" id="index">
         <img src="https://www.robotevents.com/uploads/team_regs/e115a54858948c2fa235f9f381c49f95.jpeg?1716182627" alt="Team Logo" style="max-width:8%; height:auto;">
