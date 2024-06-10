@@ -1,187 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>98040C Slippery Penguin</title>
+<title>98040C Slippery Penguins</title>
 <style>
-  html {
-  height: 100%;
-}
-
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f5f9; /* Light blue background */
 }
-
-.footer {
-  margin-top: auto; /* Pushes the footer to the bottom */
-  position: sticky;
-  bottom: 0;
-  width: 100%;
+/* ... your other styles */
+.navbar { 
+    background-color: #47B5FF; /* Light blue navbar */
+    overflow: hidden; 
+    position: fixed; /* Keep navbar at the top */
+    top: 0;
+    width: 100%;
+    z-index: 100; /* Ensure navbar is above other content */
 }
-  body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; }
-  .navbar { background-color: #868E15; overflow: hidden; }
-  .navbar a { float: left; display: block; color: #f2f2f2; text-align: center; padding: 14px 20px; text-decoration: none; }
-  .navbar a:hover { background-color: #ddd; color: black; }
-  .main-header { padding: 40px; text-align: center; background: white; color: white; }
-  .main-header h1 { font-size: 50px; }
-  .team-section { display: flex; flex-wrap: wrap; justify-content: center; padding: 20px; }
-  .member-card { background: #f2f2f2; margin: 10px; padding: 20px; text-align: center; width: calc(25% - 20px); }
-  .member-card img { width: 100px; height: 100px; border-radius: 50%; }
-  .member-card h3 { margin: 10px 0; }
-  .member-card p { margin: 5px 0; }
-  .footer { background-color: white; color: white; text-align: center; padding: 10px; position: relative; bottom: 0; width: 100%; }
-
-  img {
-  transition: opacity 0.5s ease-out;
-  opacity: 1; /* Full opacity initially */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
 }
-
-img.fade-out {
-  opacity: 0; /* Fully transparent */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
 }
-
-  .slideshow-container {
-  position: fixed; /* Fixed position to cover the entire screen */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Set behind all other content */
-}
-
-.mySlide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  animation: fade 8s infinite;
-  -webkit-animation: fade 8s infinite;
-  opacity: 0; /* Start with slides invisible */
-}
-
-/* Add keyframes for the fade animation */
-@keyframes fade {
-  0%, 100% { opacity: 0; }
-  20%, 80% { opacity: 1; }
-}
-  CSS
-
+/* ... more of your styles */ 
 .main-header {
-  position: relative;
-  background: url('your-image-url') no-repeat center center; /* Replace with your image URL */
-  background-size: cover;
-  color: black; /* Text color for visibility */
+    padding: 200px 40px; /* Increased padding for scrolling effect */
+    text-align: center;
+    color: black;
+    position: relative; /* For positioning the overlay */
 }
 
 .main-header::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: white;
-  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
-  z-index: -2;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('your-image-url') no-repeat center center; /* Replace with your image URL */
+    background-size: cover;
+    z-index: -1; /* Place behind the main content */
+}
+/* ... rest of your styles */
+
+.team-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px; /* Increased padding */
+    background-color: white; /* White background for team section */
 }
 
+.member-card {
+    background: #f2f2f2;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: calc(25% - 20px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add subtle shadow */
+}
+
+.member-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensure image covers the circle */
+}
+
+.member-card h3 {
+    margin: 10px 0;
+}
+
+.member-card p {
+    margin: 5px 0;
+}
+/* ... rest of your styles */
+.footer { 
+    background-color: #47B5FF; /* Light blue footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+/* ... rest of your styles */
 </style>
 </head>
 <body>
-  
+    <div class="navbar">
+        <a href="#index">Home</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="slideshow-container">
+        <div class="mySlide" style="background-image: url('https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1714678860/mercerislandschoolsorg/ik0cr0kyryevsfcfxkon/01.jpg');"></div>
+        <div class="mySlide" style="background-image: url('https://pbs.twimg.com/media/GH20Zx0boAA4xSY.jpg:large');"></div>
+        <div class="mySlide" style="background-image: url('https://pbs.twimg.com/media/GH20ZxzbwAAVugG?format=jpg&name=large');"></div>
+        </div>
 
-<div class="navbar">
-  <a href="#index">Home</a>
-  <a href="#team">Team</a>
-  <a href="#contact">Contact</a>
-</div>
-<div class="slideshow-container">
-  <!-- Slides -->
-  <div class="mySlide" style="background-image: url('https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1714678860/mercerislandschoolsorg/ik0cr0kyryevsfcfxkon/01.jpg');"></div>
-  <div class="mySlide" style="background-image: url('https://pbs.twimg.com/media/GH20Zx0boAA4xSY.jpg:large');"></div>
-  <div class="mySlide" style="background-image: url('https://pbs.twimg.com/media/GH20ZxzbwAAVugG?format=jpg&name=large');"></div>
-  <!-- Add more slides as needed -->
-</div>
-<div class="main-header">
-   <img src="https://www.robotevents.com/uploads/team_regs/e115a54858948c2fa235f9f381c49f95.jpeg?1716182627" alt="Team Logo" style="max-width:8%; height:auto;">
-  <h1>98040C</h1>
-  <p>We are 98040C Slippery Penguins, we are a robotics team based out of Mercer Island, Washington.</p>
-</div>
+    <div class="main-header" id="index">
+        <img src="https://www.robotevents.com/uploads/team_regs/e115a54858948c2fa235f9f381c49f95.jpeg?1716182627" alt="Team Logo" style="max-width:8%; height:auto;">
+        <h1>98040C</h1>
+        <p>We are 98040C Slippery Penguins, we are a robotics team based out of Mercer Island, Washington.</p>
+    </div>
 
-<div class="team-section" id="team">
-  <!-- Member cards will be inserted here by JavaScript -->
-</div>
+    <div class="team-section" id="team">
+        </div>
 
-<div class="footer">
-  <p>98040C Robotics</p>
-</div>
+    <div class="footer">
+        <p>98040C Robotics</p>
+    </div>
+
 
 <script>
 // Example data for team members
 const teamMembers = [
-  { name: 'CJ Nguyen', position: 'Coach', imgSrc: 'path-to-image' },
-  { name: 'Harry Nguyen', position: 'Driver, Builder', imgSrc: 'path-to-image' },
-   { name: 'Brian Kwon', position: 'Programmer, Builder', imgSrc: 'path-to-image' },
-  { name: 'Jeremy Leung', position: 'Notebooker', imgSrc: 'path-to-image' },
-   { name: 'Tilman Wyse', position: 'Notebooker', imgSrc: 'path-to-image' },
-  { name: 'Kenan Khatib', position: 'Notebooker', imgSrc: 'path-to-image' },
-   { name: 'Henry Xing', position: 'Builder', imgSrc: 'path-to-image' },
-  { name: 'Z’ev Danielli', position: 'Programmer', imgSrc: 'path-to-image' },
-  // Add more team members here
+    { name: 'CJ Nguyen', position: 'Coach', imgSrc: 'path-to-image' },
+    { name: 'Harry Nguyen', position: 'Driver, Builder', imgSrc: 'path-to-image' },
+    { name: 'Brian Kwon', position: 'Programmer, Builder', imgSrc: 'path-to-image' },
+    { name: 'Jeremy Leung', position: 'Notebooker', imgSrc: 'path-to-image' },
+    { name: 'Tilman Wyse', position: 'Notebooker', imgSrc: 'path-to-image' },
+    { name: 'Kenan Khatib', position: 'Notebooker', imgSrc: 'path-to-image' },
+    { name: 'Henry Xing', position: 'Builder', imgSrc: 'path-to-image' },
+    { name: 'Z’ev Danielli', position: 'Programmer', imgSrc: 'path-to-image' },
+    // Add more team members here
 ];
 
 // Function to create member cards
 function createMemberCard(member) {
-  return `
+    return `
     <div class="member-card">
-      <img src="${member.imgSrc}" alt="${member.name}">
-      <h3>${member.name}</h3>
-      <p>${member.position}</p>
+        <img src="${member.imgSrc}" alt="${member.name}">
+        <h3>${member.name}</h3>
+        <p>${member.position}</p>
     </div>
-  `;
+    `;
 }
 
 // Function to render team members
 function renderTeamMembers() {
-  const teamSection = document.querySelector('.team-section');
-  teamMembers.forEach(member => {
-    teamSection.innerHTML += createMemberCard(member);
-  });
+    const teamSection = document.querySelector('.team-section');
+    teamMembers.forEach(member => {
+        teamSection.innerHTML += createMemberCard(member);
+    });
 }
 
 // Call the function to render team members
 renderTeamMembers();
 </script>
+
 <script>
-  let slideIndex = 0;
+let slideIndex = 0;
 showSlides();
 
 function showSlides() {
-  let slides = document.getElementsByClassName("mySlide");
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  slides[slideIndex-1].style.display = "block";  
-  setTimeout(showSlides, 4000); // Change image every 4 seconds
+    let slides = document.getElementsByClassName("mySlide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 4000); // Change image every 4 seconds
 }
-window.addEventListener('scroll', function() {
-  var image = document.querySelector('.main-header img');
-  var scrollValue = window.scrollY;
 
-  if (scrollValue > 300) { // Adjust the 100 value to the desired threshold
-    image.classList.add('fade-out');
-  } else {
-    image.classList.remove('fade-out');
-  }
+window.addEventListener('scroll', function() {
+    var image = document.querySelector('.main-header img');
+    var scrollValue = window.scrollY;
+
+    if (scrollValue > 300) { // Adjust the 100 value to the desired threshold
+        image.classList.add('fade-out');
+    } else {
+        image.classList.remove('fade-out'); 
+    }
 });
 </script>
+
 </body>
 </html>
-
