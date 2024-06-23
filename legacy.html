@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>98040C Legacy & Awards</title>
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f5f9; /* background */
+}
+
+.navbar { 
+    background-color: #47B5FF; /*  navbar */
+    overflow: hidden;  
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+/* ... more of your styles */ 
+.slideshow-container {
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.mySlide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slide 12s infinite; /* 12 seconds for each slide */
+}
+
+@keyframes slide {
+    0% { opacity: 0; }
+    8% { opacity: 1; } /* Each slide is visible for 33% of the time (4s) */
+    33% { opacity: 1; }
+    41% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.mySlide:nth-child(1) { animation-delay: 0s; }
+.mySlide:nth-child(2) { animation-delay: 4s; }
+.mySlide:nth-child(3) { animation-delay: 8s; }
+
+.main-header {
+    padding: 200px 40px; /* Increased padding for scrolling effect */
+    text-align: center;
+    color: black;
+    position: relative; /* For positioning the overlay */
+}
+
+.main-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('your-image-url') no-repeat center center; 
+    background-size: cover;
+    z-index: -1; 
+}
+
+
+.team-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px; /* Increased padding */
+    background-color: white; /* White background for team section */
+}
+
+.member-card {
+    background: #f2f2f2;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: calc(25% - 20px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add subtle shadow */
+}
+
+.member-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensure image covers the circle */
+}
+
+.member-card h3 {
+    margin: 10px 0;
+}
+
+.member-card p {
+    margin: 5px 0;
+}
+/* ... rest of your styles */
+.footer { 
+    background-color: #47B5FF; /* Light blue footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+/* ... rest of your styles */
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#index">Home</a>
+        <a href="#legacy">Legacy and Awards</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="slideshow-container">
+        <div class="mySlide" style="background-image: url('https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1714678860/mercerislandschoolsorg/ik0cr0kyryevsfcfxkon/01.jpg');"></div>
+        <div class="mySlide" style="background-image: url('https://pbs.twimg.com/media/GH20Zx0boAA4xSY.jpg:large');"></div>
+        <div class="mySlide" style="background-image: url('https://pbs.twimg.com/media/GH20ZxzbwAAVugG?format=jpg&name=large');"></div>
+    </div>
+
+    <div class="main-header" id="index">
+        <h1>Awards</h1> 
+        <img src="https://www.robotevents.com/uploads/team_regs/e115a54858948c2fa235f9f381c49f95.jpeg?1716182627" alt="Team Logo" style="max-width:40%; height:auto;">
+        <h2>As a multi-year team, we have achieved many awards. Here is a compilation of our best.</h3>
+      
+        <h3>Washington State Championship 2024</h4>
+      <h4>Tournament Champion</h4> 
+        <p>After a long season, 98040C had won the State Championship, while partnered with 938X</p>
+        <p>Doing so, we had moved onto the World Championship</p>
+      <p>Image would go here but I don't have one</p>
+      <h4>Innovate Award</h4>
+      <p>Due to our effort put into our notebook, documentation, and general design effectiveness, we had recieved this award</p>
+        
+      
+    </div>
+
+    <div class="team-section" id="team">
+        </div>
+
+    <div class="footer">
+        <p>98040C Robotics, 2024-2025 High Stakes</p>
+    </div>
+
+
+<script>
+// Example data for team members
+
+
+// Function to render team members
+function renderTeamMembers() {
+    const teamSection = document.querySelector('.team-section');
+    teamMembers.forEach(member => {
+        teamSection.innerHTML += createMemberCard(member);
+    });
+}
+
+// Call the function to render team members
+renderTeamMembers();
+</script>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let slides = document.getElementsByClassName("mySlide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 4000); // Change image every 4 seconds
+}
+
+window.addEventListener('scroll', function() {
+    var image = document.querySelector('.main-header img');
+    var scrollValue = window.scrollY;
+
+    if (scrollValue > 300) { // Adjust the 100 value to the desired threshold
+        image.classList.add('fade-out');
+    } else {
+        image.classList.remove('fade-out'); 
+    }
+});
+</script>
+
+</body>
+</html>
