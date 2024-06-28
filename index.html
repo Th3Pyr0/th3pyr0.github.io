@@ -209,15 +209,18 @@ function showSlides() {
 }
 
 window.addEventListener('scroll', function() {
-    var image = document.querySelector('.slideshow-container img');
-    var scrollValue = window.scrollY;
+  var slides = document.querySelectorAll('.mySlide'); // Select all slides
+  var scrollValue = window.scrollY;
+  var slideshowContainer = document.querySelector('.slideshow-container');
 
-    if (scrollValue > 60) { // Adjust the 100 value to the desired threshold
-        image.classList.add('fade-out');
-    } else {
-        image.classList.remove('fade-out'); 
-    }
+  // Check if the slideshow container is out of view
+  if (scrollValue > slideshowContainer.offsetTop + slideshowContainer.offsetHeight) {
+    slides.forEach(slide => slide.classList.add('fade-out'));
+  } else {
+    slides.forEach(slide => slide.classList.remove('fade-out'));
+  }
 });
+
 </script>
 
 </body>
