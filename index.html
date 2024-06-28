@@ -202,17 +202,17 @@ function showSlides() {
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none"; 
     }
-    slideIndex++;
+    slideIndex++;2
     if (slideIndex > slides.length) {slideIndex = 1} 
     slides[slideIndex-1].style.display = "block"; 
     setTimeout(showSlides, 4000); // Change image every 4 seconds
 }
 
 window.addEventListener('scroll', function() {
-    var image = document.querySelector('.main-header img');
+    var image = document.querySelector('.slideshow-container img');
     var scrollValue = window.scrollY;
 
-    if (scrollValue > 50) { // Adjust the 100 value to the desired threshold
+    if (scrollValue > 200) { // Adjust the 100 value to the desired threshold
         image.classList.add('fade-out');
     } else {
         image.classList.remove('fade-out'); 
