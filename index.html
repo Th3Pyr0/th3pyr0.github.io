@@ -208,14 +208,17 @@ function showSlides() {
     setTimeout(showSlides, 4000); // Change image every 4 seconds
 }
 
-var image = document.querySelector('.slideshow-container img');
+window.addEventListener('scroll', function() {
     var scrollValue = window.scrollY;
-
-    if (scrollValue > 60) { // Adjust the 100 value to the desired threshold
-        image.classList.add('fade-out');
+    var slideshow = document.querySelector('.slideshow-container');
+    
+    if (scrollValue > 60) { // Adjust the scroll threshold as needed
+        slideshow.classList.add('fade-out');
     } else {
-        image.classList.remove('fade-out'); 
+        slideshow.classList.remove('fade-out'); 
     }
+});
+
 
 </script>
 
